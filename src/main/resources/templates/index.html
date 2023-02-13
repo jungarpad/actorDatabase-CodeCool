@@ -1,21 +1,26 @@
-<!DOCTYPE html>
-<html>
+<html lang="html">
 <head>
     <meta charset="UTF-8">
-
+    <title>Actors Database</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 
 <body>
+<img th:src="@{/images/budspencer.png}" alt="budspencer">
     <div th:each="actor:${actors}">
+        <a th:href="@{/actors/{id}(id = ${actor.getId()})}">
         <span th:text="${actor.getName()}"></span>
+        </a>
     </div>
     <form action="/actors" method="post">
-        <p>Name: <input type="text" name="name"/></p>
-        <p>Famous Role: <input type="text" name="famousRole"/></p>
-        <p>Special skill: <input type="text" name="specialSkill"/></p>
-        <p>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name"/>
+        <label for="famousRole">Famous Role:</label>
+        <input type="text" name="famousRole" id="famousRole"/>
+        <label for="specialSkill"> Special skill:</label>
+        <input type="text" name="specialSkill" id="specialSkill"/>
+
             <button type="submit">Save actor!</button>
-        </p>
     </form>
 </body>
 </html>

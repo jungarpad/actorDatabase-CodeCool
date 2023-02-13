@@ -1,0 +1,23 @@
+
+<html lang="html">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${actor.getName()}"></title>
+</head>
+<body>
+    <table>
+        <thead>
+        <tr>
+            <td>Name</td>
+            <td>Famous Role</td>
+            <td>Special Skills</td>
+        </tr>
+        </thead>
+        <tr>
+            <td th:text="${actor.getName()}"></td>
+            <td th:text="${actor.getFamousRole()}"></td>
+            <td th:text="${actor.getSpecialSkill()}"></td>
+        </tr>
+    </table>
+</body>
+</html>

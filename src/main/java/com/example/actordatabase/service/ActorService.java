@@ -25,4 +25,8 @@ public class ActorService {
         Actor actor = new Actor(1, actorDto.getName(), actorDto.getFamousRole(), actorDto.getSpecialSkill());
         actorRepository.addActor(actor);
     }
+
+    public Actor findActorById(int id){
+        return actorRepository.getActor(id);
+    }
 }
