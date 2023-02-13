@@ -11,12 +11,14 @@
             <td>Name</td>
             <td>Famous Role</td>
             <td>Special Skills</td>
+            <td>Famous Movie</td>
         </tr>
         </thead>
         <tr>
             <td th:text="${actor.getName()}"></td>
             <td th:text="${actor.getFamousRole()}"></td>
             <td th:text="${actor.getSpecialSkill()}"></td>
+            <td th:text="${actor.getBestMovie()}"></td>
         </tr>
     </table>
 </body>

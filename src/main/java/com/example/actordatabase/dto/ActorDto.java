@@ -9,4 +9,5 @@ public class ActorDto {
     private String name;
     private String famousRole;
     private String specialSkill;
+    private String bestMovie;
 }

@@ -22,7 +22,7 @@ public class ActorService {
     }
 
     public void addActor(ActorDto actorDto) {
-        Actor actor = new Actor(1, actorDto.getName(), actorDto.getFamousRole(), actorDto.getSpecialSkill());
+        Actor actor = new Actor(1, actorDto.getName(), actorDto.getFamousRole(), actorDto.getSpecialSkill(), actorDto.getBestMovie());
         actorRepository.addActor(actor);
     }
 
